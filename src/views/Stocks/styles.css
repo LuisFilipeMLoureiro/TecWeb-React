@@ -7,14 +7,13 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .line {
     margin-top: 30px;
-    /* position: relative; */
+    margin-left: 2rem;
     width: 800px;
-    margin-left: 30px;
     background: #212121;
     border-radius: 4px;
 }
@@ -22,12 +21,16 @@ html {
 .second-content {
     display: flex;
     flex-direction: row;
+    justify-content: center; 
+    margin-top: 2rem;
 }
 
 .trending {
-    padding: 30px;
-    width: 500px;
-    margin-right: 100px;
+    width: 400px;
+    /* margin-right: 2rem; */
+}
+.trending .title-page {
+    margin-top: 0px;
 }
 
 .link-text {
@@ -37,26 +40,20 @@ html {
 .list-stocks {
     border-radius: 8px;
     margin-top: 20px;
+    width: 400px;
     background: #212121;
 }
 
 a {
     cursor: pointer;
 }
-.list-group-inner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
 .item-content {
     cursor: pointer;
-    /* position: relative; */
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
-    height: 90px;
+    /* height: 90px; */
     background-color: #212121 !important;
     transition: 0.8s !important;
 }
@@ -68,7 +65,6 @@ a {
 
 .price-now-stocks {
     font-size: 16px;
-    /* position: absolute; */
     top: 20px;
     left: 75%;
     color: #fff;
@@ -84,12 +80,15 @@ a {
     padding: 50px 40px;
     border-radius: 8px;
     background: #212121;
-    margin-right: 30px;
+    box-sizing: border-box;
+    width: 400px;
+    /* margin-right: 30px; */
 }
 
-.form-control {
-    width: 400px !important;
-    height: 35px !important;
+.search-input {
+    width: 100%;
+    height: 35px;
+    /* box-sizing: border-box; */
 }
 
 .search-stock {
@@ -98,7 +97,6 @@ a {
 }
 
 .information {
-    /* position: relative; */
     margin-top: 50px;
     font-size: 16px;
     width: 750px;
@@ -128,6 +126,7 @@ a {
 .pais-title,
 .employees-title {
     font-weight: bold;
+    padding: 0 1.5rem;
 }
 
 .company-symbol,
@@ -153,6 +152,9 @@ a {
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 10px;
+    text-align: left;
+    padding: 0 1rem;
+    font-size: 1rem;
 }
 
 .market-title {
@@ -168,124 +170,6 @@ a {
     line-height: 28px;
 }
 
-.company-symbol {
-    font-size: 32px;
-    /* position: relative; */
-    top: 0;
-    left: 0px;
-    color: #2c82c9;
-}
-
-.company-name {
-    font-size: 18px;
-    /* position: relative; */
-    top: 0;
-    left: 10px;
-}
-
-.stock-price {
-    /* position: absolute; */
-    left: 50px;
-    top: 170px;
-}
-
-.open {
-    /* position: absolute; */
-    left: 50px;
-    top: 270px;
-}
-
-.volume {
-    /* position: absolute; */
-    left: 420px;
-    top: 370px;
-}
-
-.market-cap {
-    /* position: absolute; */
-    left: 420px;
-    top: 470px;
-}
-
-.float-shares {
-    /* position: absolute; */
-    left: 420px;
-    top: 570px;
-}
-
-.fechamento {
-    /* position: absolute; */
-    left: 50px;
-    top: 370px;
-}
-
-.lucro {
-    /* position: absolute; */
-    left: 420px;
-    top: 670px;
-}
-
-.industria {
-    /* position: absolute; */
-    left: 50px;
-    top: 470px;
-}
-
-.link {
-    /* position: absolute; */
-    left: 50px;
-    top: 570px;
-}
-
-.forward_pe {
-    /* position: absolute; */
-    left: 50px;
-    top: 670px;
-}
-
-.acao_similar {
-    /* position: absolute; */
-    left: 50px;
-    top: 770px;
-}
-
-.employees {
-    /* position: absolute; */
-    left: 420px;
-    top: 770px;
-}
-
-.pais {
-    /* position: absolute; */
-    left: 50px;
-    top: 870px;
-}
-
-.descricao {
-    padding: 40px;
-    /* position: absolute; */
-    left: 20px;
-    top: 940px;
-}
-
-.high {
-    /* position: absolute; */
-    top: 170px;
-    left: 420px;
-}
-
-.low {
-    /* position: absolute; */
-    top: 270px;
-    left: 420px;
-}
-
-.market {
-    /* position: absolute; */
-    top: 83px;
-    left: 400px;
-}
-
 .log-out {
     width: 100%;
     margin-top: 40px;
@@ -293,6 +177,7 @@ a {
 
 .hr {
     background-color: #f0f0f0;
+    flex-basis: 100%;
 }
 
 .news-break {
@@ -316,12 +201,32 @@ a {
     height: auto;
 }
 
+.list-group-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.list-group-inner .description {
+    margin: 0;
+}
+.list-group-inner .price {
+    margin-left: 1rem;
+}
+
 .information-table {
-    margin-top: 3rem;
+    margin-left: 2rem;
     background-color: #212121;
     width: 800px;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem 0px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .information-table table {
@@ -349,6 +254,7 @@ a {
 }
 .information-table .common-text-group .link-text {
     margin: 0;
+    padding: 0;
 }
 
 .information-table .title {
@@ -358,7 +264,7 @@ a {
 .information-table .text {
     color: #f0f0f0;
     text-align: left;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 1.5rem;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
